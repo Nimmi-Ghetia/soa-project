@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<env-entry> 
+    <env-entry-name>DB_DRIVER</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</env-entry-value> 
+</env-entry>       
+<env-entry> 
+    <env-entry-name>DB_URL</env-entry-name>
+    <env-entry-type>java.lang.String</env-entry-type>
+    <env-entry-value>jdbc:sqlserver://soaproject.database.windows.net:1433;database=Movie_Booking;user=adventure@soaproject;password=sem6_pro;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</env-entry-value> 
+</env-entry>       
+
+<context-param>
+        <description>Database Driver</description>
+        <param-name>DB_DRIVER</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <description>Database URL</description>
+        <param-name>DB_URL</param-name>
+        <param-value>jdbc:sqlserver://soaproject.database.windows.net:1433;database=Movie_Booking;user=adventure@soaproject;password=sem6_pro;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</param-value>
+    </context-param>
+   
+    <servlet>
+        <servlet-name>Fetch</servlet-name>
+        <servlet-class>mypro.Fetch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Fetch</servlet-name>
+        <url-pattern>/Fetch</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
