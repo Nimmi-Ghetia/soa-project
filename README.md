@@ -1,2 +1,5 @@
 # soa-project
-interoperatibility between java and .net using restful java web service and database on azure
+This is a simple soa project which shows interoperatibility between java and .net using restful java web service and database on azure.
+This is a simple movie booking project where restful webservices performs the operartions on database like fetching movies, and other CRUD operations.
+This is a simple project(without gui) showing interaction between client and admin sites made on different platforms with java web service.The admin side is a netbeans java apllication which will perform task like adding, updating and fetching all movies which use restful java webservice that is deployed on digital ocean(now undeployed due to limited free credits). The data is tranformed in the form of XML object.The client side in built in visual studio 2015 which simply books the ticket for a specific movie and allows to download the ticket number after paying for it(not actual payment). This project contains ip address of the place where it was deployed. Chnages are needed to run it successfully like replacing ip address with localhost. 
+Hope it is helpful to new learner who wants to implement restful web service and also how to consume that web service in .NET and JAVA.
